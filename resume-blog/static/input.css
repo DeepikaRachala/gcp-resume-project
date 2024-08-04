@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .custom-section{
+        @apply max-w-4xl mx-auto my-10 p-8;
+    }
+    .section-title{
+        @apply text-3xl border-l-4 border-transparent border-l-cyan-950 border font-bold mt-8 mb-4;
+    }
+
+    .item{
+        @apply mb-6;
+    }
+
+    .item-date{
+        @apply text-lg underline underline-offset-2 decoration-cyan-950;
+    }
+
+    .item-title{
+        @apply text-xl text-cyan-950 font-semibold;
+    }
+
+    .item-content{
+        @apply text-sm text-white;
+    }
+
+    .skills{
+        @apply border-dotted border-2 rounded-lg w-fit h-fit p-2 border-cyan-950;
+    }
+}
