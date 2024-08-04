@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deepika Rachala</title>
+    <meta content="Deepika Rachala - Cloud Administrator" name="description">
+    <meta content="Deepika,Rachala,CCNA,Architect,Engineer" name="keywords">
     <link rel="stylesheet" type="text/css" href="/static/output.css">
-    <link href="<https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css>" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css>" rel="stylesheet">
 </head>
 <body class="bg-black font-mono text-white ">
     <!--Menu Section-->
@@ -33,7 +35,10 @@
     </div>
     <!--Visitor Count Section-->
     <div class="max-w-4l mx-auto my-1 p-8">
-        <h1 class="font-bold text-xl text-center">Visitor Count: 0</h1>
+        <div class="flex flex-row">
+            <h1 class="font-bold text-xl text-center">Visitor Count:</h1>
+            <h1 id="visitor-count"></h1>
+        </div>
     </div>
 
     <!--Objecttive-->
@@ -96,7 +101,12 @@
     <footer>
         <p class="p-4 border-t-4 border-white">© 2024 DR. All rights reserved.</p>
     </footer>
+    <!--Vendor JS Files-->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!--Custom Files-->
+    <script src="visitor-count.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
