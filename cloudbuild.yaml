@@ -6,3 +6,6 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
   id: Invalidate the content CDN
   args: ['gcloud', 'compute', 'url-maps', 'invalidate-cdn-cache', 'cloudresume-url-map', '--path', '/*', '--project', '$PROJECT_ID']
+
+serviceAccount: '218055873640@cloudbuild.gserviceaccount.com'
+logging: CLOUD_LOGGING_ONLY
