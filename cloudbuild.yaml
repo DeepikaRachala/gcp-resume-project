@@ -5,7 +5,7 @@ steps:
   args: ['gsutil', '-m', 'rsync', '-d', '-r', 'resume-blog/','gs://cloud-resume-website-bucket']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
   id: Invalidate the content CDN
-  args: ['gcloud', 'compute', 'url-maps', 'invalidate-cdn-cache', 'cloudresume-url-map', '--path', '/*', '--project', '$PROJECT_ID']
+  args: ['gcloud', 'compute', 'url-maps', 'invalidate-cdn-cache', 'cloud-resume-loadbalancer', '--path', '/*', '--project', '$PROJECT_ID']
 logsBucket: 'gs://build-log-bucket'
 options:
   logging: GCS_ONLY
