@@ -6,6 +6,6 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
   id: Invalidate the content CDN
   args: ['gcloud', 'compute', 'url-maps', 'invalidate-cdn-cache', 'cloudresume-url-map', '--path', '/*', '--project', '$PROJECT_ID']
-
+logsBucket: 'gs://build-log-bucket'
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
