@@ -80,16 +80,5 @@ Resources:
     labels:
       app: gcpresume
 
-#Create a bucket to host cloud function
-- name: cloud-resume-function-bucket
-  type: storage.v1.bucket
-  properties:
-    storageClass: REGIONAL
-    location: {{ properties['region'] }}
-    iamConfiguration:
-      uniformBucketLevelAccess:
-        enabled: true
-    labels:
-      app: gcpresume
 
 #gcloud deployment-manager deployments create my-resume-deploy --template resume.jinja  --properties region:us-central1
